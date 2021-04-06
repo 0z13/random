@@ -14,5 +14,5 @@ day02a xs = filter (> 1) $ concatMap (nubOrd . M.elems . freqs) xs
 
 main :: IO ()
 main = do
-  xs <- lines <$> readFile "../resources/dat18/day02.txt"
+  xs <- lines <$> readFile "./resources/dat18/day02.txt"
   print $ foldr (*) 1 $ map length $ group . sort $ day02a xs

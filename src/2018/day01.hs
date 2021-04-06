@@ -3,7 +3,7 @@ import Data.Maybe
 
 main :: IO ()
 main = do 
-  xs <- lines <$> readFile "../resources/dat18/day01.txt" 
+  xs <- lines <$> readFile "./resources/dat18/day01.txt" 
   putStrLn "part 1:" 
   print $ foldr (+) 0 $ map parse xs -- pt 1
   putStrLn "part 2"
