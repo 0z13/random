@@ -1,0 +1,64 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e70a81bb5b771ebd3f551a1d5635d9566b6e1d6710f32e4139cb4bd7314ecdf6
+
+name:           haskellindepth
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/haskellindepth#readme>
+homepage:       https://github.com/githubuser/haskellindepth#readme
+bug-reports:    https://github.com/githubuser/haskellindepth/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/haskellindepth
+
+library
+  exposed-modules:
+      Lib, Chap4
+  other-modules:
+      Paths_haskellindepth
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , text
+    , mtl
+  default-language: Haskell2010
+
+executable haskellindepth-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskellindepth
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskellindepth
+  default-language: Haskell2010
+
+test-suite haskellindepth-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_haskellindepth
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskellindepth
+  default-language: Haskell2010
